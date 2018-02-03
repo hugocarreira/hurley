@@ -7,6 +7,13 @@ const Auth = require('../models/auth');
 
 router.get('/auth', (req, res) => {
 
+    var dataResult = {
+        "Success": null,
+        "ErrorReport": null,
+        "AuthDate": new Date(),
+        "AuthResult": null
+    };
+
     res.status = 200; 
     res.json(dataResult);
 
