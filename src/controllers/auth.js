@@ -14,7 +14,7 @@ router.get('/auth', (req, res) => {
         "AuthResult": null
     };
 
-    res.status = 200; 
+    res.status(200); 
     res.json(dataResult);
 
 });
