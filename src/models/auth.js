@@ -19,7 +19,6 @@ authSchema.pre('save', function(next) {
 
     if (!account.isModified('password')) return next();
 
-    // generate a salt
     bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
         if (err) return next(err);
 
