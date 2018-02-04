@@ -13,7 +13,6 @@ var authSchema = new Schema({
 
 }, {collection: 'auth'});
 
-
 authSchema.pre('save', function(next) {
     var account = this;
 
