@@ -13,4 +13,4 @@ pipelines:
             - node
           script: # Modify the commands below to build your repository.
             - npm install
-            - git push https://heroku:c5c683bb-df49-433a-8b93-f24525539a8f@git.heroku.com/chanel-mylook.git HEAD
+            - git push
