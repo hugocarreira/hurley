@@ -6,9 +6,9 @@ const ObjectId = Schema.ObjectId;
 
 var authSchema = new Schema({
     
-    email: { type: String, required: true, unique: true },
-    username: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
+    email: { type: String, unique: true },
+    username: { type: String, unique: true },
+    password: { type: String },
     created_at: { type: Date, default: Date.now },
 
 }, {collection: 'auth'});

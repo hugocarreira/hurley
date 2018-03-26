@@ -2,8 +2,9 @@
 const express = require('express');
 const router = express.Router();
 
-/* hurley api */
+/* felicia.js */
 const Auth = require('../models/auth');
+const config = require('../config/config.js');
 
 router.get('/auth', (req, res) => {
 
@@ -50,7 +51,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/auth', (req, res) => {
+router.post('/username', (req, res) => {
     var authData = req.body;
     var username = { 'username': authData.username };
 
@@ -71,7 +72,7 @@ router.post('/auth', (req, res) => {
                 if(!isMatch) {
                 dataResult.ErrorReport = {
                         "Error": true,
-                        "ErrorDescription": "Error in Authentication, Password incorret.",                
+                        "ErrorDescription": "Error in Authentication, Password incorret.",        
                     };
                     dataResult.Success = false;
                     res.status(401);
@@ -86,7 +87,7 @@ router.post('/auth', (req, res) => {
         } else {
             dataResult.ErrorReport = {
                 "Error": true,
-                "ErrorDescription": "Error in to find username.",                
+                "ErrorDescription": "Error in to find username.",
             };
             dataResult.Success = false;
             res.status(404);
@@ -95,7 +96,7 @@ router.post('/auth', (req, res) => {
     });
 });
 
-router.post('/auth', (req, res) => {
+router.post('/authentication', (req, res) => {
     var authData = new Auth(req.body);
 
     var dataResult = {

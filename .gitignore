@@ -1,5 +1,8 @@
 node_modules
-src/config/config.js
+/src/config/config.js
 /src/config/database.js
+bitbucket-pipelines.yml
+.env
+
 
 npm-debug.log
