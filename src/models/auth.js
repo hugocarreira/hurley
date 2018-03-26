@@ -13,13 +13,11 @@ var authSchema = new Schema({
 
 }, {collection: 'auth'});
 
-
 authSchema.pre('save', function(next) {
     var account = this;
 
     if (!account.isModified('password')) return next();
 
-    // generate a salt
     bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
         if (err) return next(err);
 

@@ -15,7 +15,7 @@ router.get('/auth', (req, res) => {
         "AuthResult": null
     };
 
-    res.status = 200; 
+    res.status(200); 
     res.json(dataResult);
 
 });
@@ -125,7 +125,5 @@ router.post('/authentication', (req, res) => {
         res.json(dataResult);
     });
 });
-
-
 
 module.exports = router;
